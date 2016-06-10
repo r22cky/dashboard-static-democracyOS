@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TODO</title>
     <%= csrf_meta_tags %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
+
   <body>
-    <%= yield %>
+    <%= render 'layouts/navbar' %>
+    <div class="row" style="margin-right: 0px;">
+      <div class="col-sm-3">
+        <%= render 'layouts/lateral_navbar' %>
+      </div>
+      <div class="col-sm-9">
+        <%= yield %>
+      </div>
+    </div>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>

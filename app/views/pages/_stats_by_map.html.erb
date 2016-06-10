@@ -1,0 +1,28 @@
+<div id="chart_div" style="height: 200px"></div>
+
+
+<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type='text/javascript'>
+ google.charts.load('current', {'packages': ['geochart',"corechart"]});
+ google.charts.setOnLoadCallback(drawMarkersMap);
+
+  function drawMarkersMap() {
+  var data = google.visualization.arrayToDataTable([
+    ['City',   'Population', 'Area Percentage'],
+    ['Paris',  65700000, 50],
+    ['Lyon', 81890000, 27],
+    ['Marseille',  38540000, 23]
+  ]);
+
+  var options = {
+    sizeAxis: { minValue: 0, maxValue: 100 },
+    region: '155', // Western Europe
+    displayMode: 'markers',
+    colorAxis: {colors: ['#e7711c', '#4374e0']} // orange to blue
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+};
+</script>
