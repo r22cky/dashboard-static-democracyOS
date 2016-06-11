@@ -132,7 +132,11 @@
   border-top: 1px solid #E6E6E6;
 }
 
+// LATERAL NAVBAR CSS
+
 #lateral-navbar {
   background-color: $gray-lighter;
-  height: 100vh;
+  min-height: 100% !important;
+  height: 100%;
 }
+

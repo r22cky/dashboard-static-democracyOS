@@ -6,12 +6,12 @@
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
-      ['Task', 'Hours per Day'],
-      ['Work',     11],
-      ['Eat',      2],
-      ['Commute',  2],
-      ['Watch TV', 2],
-      ['Sleep',    7]
+      ['Age', 'Interventions'],
+      ['18-25', 11],
+      ['26-30', 25],
+      ['31-40', 14],
+      ['41-60', 7],
+      ['61 & +', 2]
     ]);
 
     var options = {

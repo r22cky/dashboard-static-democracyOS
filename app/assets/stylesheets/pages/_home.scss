@@ -2,3 +2,17 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+#calendar_basic {
+  height: 200px;
+}
+
+.panel-info {
+  border: 1px solid #64476E;
+  border-opacity: 0.5;
+}
+
+.panel-default >.panel-heading {
+  background-color: #64476E;
+  color: white;
+  opacity: 0.5;
+}
